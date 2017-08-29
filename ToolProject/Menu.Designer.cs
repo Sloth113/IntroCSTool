@@ -39,30 +39,33 @@
             // 
             // spriteMenuBttn
             // 
-            this.spriteMenuBttn.Location = new System.Drawing.Point(12, 27);
+            this.spriteMenuBttn.Location = new System.Drawing.Point(12, 437);
             this.spriteMenuBttn.Name = "spriteMenuBttn";
             this.spriteMenuBttn.Size = new System.Drawing.Size(96, 23);
             this.spriteMenuBttn.TabIndex = 1;
             this.spriteMenuBttn.Text = "Sprite Stuff";
             this.spriteMenuBttn.UseVisualStyleBackColor = true;
+            this.spriteMenuBttn.Click += new System.EventHandler(this.spriteMenuBttn_Click);
             // 
             // mapMenuBttn
             // 
-            this.mapMenuBttn.Location = new System.Drawing.Point(12, 100);
+            this.mapMenuBttn.Location = new System.Drawing.Point(114, 437);
             this.mapMenuBttn.Name = "mapMenuBttn";
             this.mapMenuBttn.Size = new System.Drawing.Size(96, 23);
             this.mapMenuBttn.TabIndex = 2;
             this.mapMenuBttn.Text = "Map Stuff";
             this.mapMenuBttn.UseVisualStyleBackColor = true;
+            this.mapMenuBttn.Click += new System.EventHandler(this.mapMenuBttn_Click);
             // 
             // collisionMenuBttn
             // 
-            this.collisionMenuBttn.Location = new System.Drawing.Point(12, 181);
+            this.collisionMenuBttn.Location = new System.Drawing.Point(216, 437);
             this.collisionMenuBttn.Name = "collisionMenuBttn";
             this.collisionMenuBttn.Size = new System.Drawing.Size(96, 23);
             this.collisionMenuBttn.TabIndex = 3;
             this.collisionMenuBttn.Text = "Collision Stuff";
             this.collisionMenuBttn.UseVisualStyleBackColor = true;
+            this.collisionMenuBttn.Click += new System.EventHandler(this.collisionMenuBttn_Click);
             // 
             // menuStrip1
             // 
@@ -70,7 +73,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(804, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -91,6 +94,7 @@
             this.spriteThingToolStripMenuItem.Name = "spriteThingToolStripMenuItem";
             this.spriteThingToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.spriteThingToolStripMenuItem.Text = "Sprite Thing";
+            this.spriteThingToolStripMenuItem.Click += new System.EventHandler(this.spriteThingToolStripMenuItem_Click);
             // 
             // mapThingToolStripMenuItem
             // 
@@ -118,23 +122,25 @@
             // 
             // quitButton
             // 
-            this.quitButton.Location = new System.Drawing.Point(197, 227);
+            this.quitButton.Location = new System.Drawing.Point(717, 437);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(75, 23);
             this.quitButton.TabIndex = 5;
             this.quitButton.Text = "Quit";
             this.quitButton.UseVisualStyleBackColor = true;
+            this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(804, 472);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.collisionMenuBttn);
             this.Controls.Add(this.mapMenuBttn);
             this.Controls.Add(this.spriteMenuBttn);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
