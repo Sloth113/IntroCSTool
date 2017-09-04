@@ -10,8 +10,15 @@ using System.Windows.Forms;
 
 namespace ToolProject {
     public partial class SpriteForm : Form {
+        SpriteSheetInfo spriteSheet;
         public SpriteForm() {
             InitializeComponent();
+        }
+
+        private void testBtn_Click(object sender, EventArgs e) {
+            spriteSheet = new SpriteSheetInfo() ;
+            spriteSheet.Serialize();
+            
         }
     }
 }

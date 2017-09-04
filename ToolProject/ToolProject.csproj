@@ -60,6 +60,7 @@
     <Compile Include="SpriteForm.Designer.cs">
       <DependentUpon>SpriteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SpriteSheetInfo.cs" />
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
