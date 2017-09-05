@@ -28,12 +28,14 @@
             this.collisionMenuBttn = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.spriteThingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mapThingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.collisionThingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitButton = new System.Windows.Forms.Button();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spriteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.collisionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +51,7 @@
             // 
             // mapMenuBttn
             // 
+            this.mapMenuBttn.Enabled = false;
             this.mapMenuBttn.Location = new System.Drawing.Point(114, 437);
             this.mapMenuBttn.Name = "mapMenuBttn";
             this.mapMenuBttn.Size = new System.Drawing.Size(96, 23);
@@ -59,6 +62,7 @@
             // 
             // collisionMenuBttn
             // 
+            this.collisionMenuBttn.Enabled = false;
             this.collisionMenuBttn.Location = new System.Drawing.Point(216, 437);
             this.collisionMenuBttn.Name = "collisionMenuBttn";
             this.collisionMenuBttn.Size = new System.Drawing.Size(96, 23);
@@ -70,7 +74,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem});
+            this.menuToolStripMenuItem,
+            this.windowToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(804, 24);
@@ -80,33 +85,12 @@
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.spriteThingToolStripMenuItem,
-            this.mapThingToolStripMenuItem,
-            this.collisionThingToolStripMenuItem,
+            this.saveToolStripMenuItem,
             this.infoToolStripMenuItem,
             this.quitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
-            // 
-            // spriteThingToolStripMenuItem
-            // 
-            this.spriteThingToolStripMenuItem.Name = "spriteThingToolStripMenuItem";
-            this.spriteThingToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.spriteThingToolStripMenuItem.Text = "Sprite Thing";
-            this.spriteThingToolStripMenuItem.Click += new System.EventHandler(this.spriteThingToolStripMenuItem_Click);
-            // 
-            // mapThingToolStripMenuItem
-            // 
-            this.mapThingToolStripMenuItem.Name = "mapThingToolStripMenuItem";
-            this.mapThingToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.mapThingToolStripMenuItem.Text = "Map Thing";
-            // 
-            // collisionThingToolStripMenuItem
-            // 
-            this.collisionThingToolStripMenuItem.Name = "collisionThingToolStripMenuItem";
-            this.collisionThingToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.collisionThingToolStripMenuItem.Text = "Collision Thing ";
             // 
             // infoToolStripMenuItem
             // 
@@ -117,8 +101,9 @@
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitButton_Click);
             // 
             // quitButton
             // 
@@ -129,6 +114,44 @@
             this.quitButton.Text = "Quit";
             this.quitButton.UseVisualStyleBackColor = true;
             this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // windowToolStripMenuItem
+            // 
+            this.windowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.spriteToolStripMenuItem,
+            this.mapToolStripMenuItem,
+            this.collisionToolStripMenuItem});
+            this.windowToolStripMenuItem.Name = "windowToolStripMenuItem";
+            this.windowToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.windowToolStripMenuItem.Text = "Window";
+            // 
+            // spriteToolStripMenuItem
+            // 
+            this.spriteToolStripMenuItem.Name = "spriteToolStripMenuItem";
+            this.spriteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.spriteToolStripMenuItem.Text = "Sprite";
+            this.spriteToolStripMenuItem.Click += new System.EventHandler(this.spriteMenuBttn_Click);
+            // 
+            // mapToolStripMenuItem
+            // 
+            this.mapToolStripMenuItem.Enabled = false;
+            this.mapToolStripMenuItem.Name = "mapToolStripMenuItem";
+            this.mapToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mapToolStripMenuItem.Text = "Map";
+            // 
+            // collisionToolStripMenuItem
+            // 
+            this.collisionToolStripMenuItem.Enabled = false;
+            this.collisionToolStripMenuItem.Name = "collisionToolStripMenuItem";
+            this.collisionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.collisionToolStripMenuItem.Text = "Collision";
             // 
             // Menu
             // 
@@ -159,12 +182,14 @@
         private System.Windows.Forms.Button collisionMenuBttn;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem spriteThingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mapThingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem collisionThingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.Button quitButton;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem windowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem spriteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem collisionToolStripMenuItem;
     }
 }
 

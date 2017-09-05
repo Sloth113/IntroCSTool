@@ -44,5 +44,18 @@ namespace ToolProject {
         private void collisionMenuBttn_Click(object sender, EventArgs e) {
 
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e) {
+
+        SpriteForm activeChild = this.ActiveMdiChild as SpriteForm;
+            if (activeChild != null) {
+                if (activeChild.GetType() == typeof(SpriteForm)) 
+                    {
+                    // Cast the activeChild and call the appropriate function here .
+                    activeChild.testBtn_Click(sender, e);
+                }
+            }
+                   
+        }
     }
 }

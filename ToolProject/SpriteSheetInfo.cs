@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 public struct Vector2 {
-    public float x, y;
+    public int x, y;
 }
 
 public struct CircleCollider {
@@ -18,9 +18,9 @@ public struct CircleCollider {
 namespace ToolProject {
 
     public class SpriteSheetInfo {
-        public List<SpriteInfo> _information;
-        public string _sheetName;
-        public string _sheetPath;
+        public List<SpriteInfo> _information;//List of sprite objects 
+        public string _sheetName;//Name of sheet "title"
+        public string _sheetPath;//Name of file path
         
         public SpriteSheetInfo() {
 
