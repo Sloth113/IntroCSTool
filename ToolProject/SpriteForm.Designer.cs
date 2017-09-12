@@ -373,6 +373,7 @@
             this.spriteSheetText.Name = "spriteSheetText";
             this.spriteSheetText.Size = new System.Drawing.Size(146, 20);
             this.spriteSheetText.TabIndex = 25;
+            this.spriteSheetText.TextChanged += new System.EventHandler(this.spriteSheetText_TextChanged);
             // 
             // spriteNameText
             // 

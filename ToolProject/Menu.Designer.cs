@@ -36,6 +36,7 @@
             this.mapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.collisionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitButton = new System.Windows.Forms.Button();
+            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +78,7 @@
             this.menuToolStripMenuItem,
             this.windowToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.MdiWindowListItem = this.windowToolStripMenuItem;
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(804, 24);
             this.menuStrip1.TabIndex = 4;
@@ -86,6 +88,7 @@
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveToolStripMenuItem,
+            this.loadToolStripMenuItem,
             this.infoToolStripMenuItem,
             this.quitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
@@ -121,27 +124,28 @@
             this.windowToolStripMenuItem.Name = "windowToolStripMenuItem";
             this.windowToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.windowToolStripMenuItem.Text = "Window";
+            this.windowToolStripMenuItem.DropDownOpening += new System.EventHandler(this.windowToolStripMenuItem_DropDownOpening);
             // 
             // spriteToolStripMenuItem
             // 
             this.spriteToolStripMenuItem.Name = "spriteToolStripMenuItem";
-            this.spriteToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.spriteToolStripMenuItem.Text = "Sprite";
+            this.spriteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.spriteToolStripMenuItem.Text = "New Sprite";
             this.spriteToolStripMenuItem.Click += new System.EventHandler(this.spriteMenuBttn_Click);
             // 
             // mapToolStripMenuItem
             // 
             this.mapToolStripMenuItem.Enabled = false;
             this.mapToolStripMenuItem.Name = "mapToolStripMenuItem";
-            this.mapToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.mapToolStripMenuItem.Text = "Map";
+            this.mapToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mapToolStripMenuItem.Text = "New Map";
             // 
             // collisionToolStripMenuItem
             // 
             this.collisionToolStripMenuItem.Enabled = false;
             this.collisionToolStripMenuItem.Name = "collisionToolStripMenuItem";
-            this.collisionToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.collisionToolStripMenuItem.Text = "Collision";
+            this.collisionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.collisionToolStripMenuItem.Text = "New Collision";
             // 
             // quitButton
             // 
@@ -152,6 +156,13 @@
             this.quitButton.Text = "Quit";
             this.quitButton.UseVisualStyleBackColor = true;
             this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
+            // 
+            // loadToolStripMenuItem
+            // 
+            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loadToolStripMenuItem.Text = "Load";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -190,6 +201,7 @@
         private System.Windows.Forms.ToolStripMenuItem spriteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem collisionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
     }
 }
 

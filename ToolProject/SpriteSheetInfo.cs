@@ -34,6 +34,14 @@ namespace ToolProject {
             mySerializer.Serialize(streamWriter, this);
             streamWriter.Close();
         }
+        public static SpriteSheetInfo Deserialize(string path) {
+            //From file //Add checks to see if it exists and all that stuff
+            XmlSerializer mySerializer = new XmlSerializer(typeof(SpriteSheetInfo));
+            StreamReader streamReader = new StreamReader(path + ".xml");
+            SpriteSheetInfo dataObj = mySerializer.Deserialize(streamReader) as SpriteSheetInfo;
+            streamReader.Close();
+            return dataObj;
+        }
     }
     public class SpriteInfo {
         public string _name;

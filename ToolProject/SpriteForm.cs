@@ -16,12 +16,17 @@ namespace ToolProject {
         public SpriteForm() {
             spriteSheet = new SpriteSheetInfo();
             InitializeComponent();
+
+            this.Text = "New Sprite Form";
         }
 
         public void testBtn_Click(object sender, EventArgs e) {
             
             spriteSheet.Serialize();
             
+        }
+        public void loadBtn(string path) {
+            spriteSheet = SpriteSheetInfo.Deserialize(path);
         }
 
         private void gridButton_Click(object sender, EventArgs e) {
@@ -47,7 +52,6 @@ namespace ToolProject {
                 }
             }
             spriteSheetBox.Refresh();
-            Invalidate();
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e) {
@@ -60,11 +64,17 @@ namespace ToolProject {
                 Rectangle rect = new Rectangle(s._pos.x, s._pos.y, s._size.x, s._size.y);
 
                 // Draw rectangle to screen.
-                if (selected == s)
-                    e.Graphics.DrawRectangle(redPen, rect);
-                else
-                    e.Graphics.DrawRectangle(blackPen, rect);
+                e.Graphics.DrawRectangle(blackPen, rect);
             }
+            //draw selected
+
+            if (selected != null) {
+               Rectangle selectRect = new Rectangle(selected._pos.x, selected._pos.y, selected._size.x, selected._size.y);
+
+                 e.Graphics.DrawRectangle(redPen, selectRect);
+            }
+            blackPen.Dispose();
+            redPen.Dispose();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) {
@@ -180,6 +190,10 @@ namespace ToolProject {
             if(selected != null) {
                 selected._name = spriteNameText.Text;
             }
+        }
+        
+        private void spriteSheetText_TextChanged(object sender, EventArgs e) {
+            this.Text = spriteSheetText.Text;
         }
     }
 }
