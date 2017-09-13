@@ -25,19 +25,20 @@ namespace ToolProject {
         public SpriteSheetInfo() {
 
             _sheetName = "SheetName";
-            _sheetPath = "\\Path something.jpg";
+            _sheetPath = "\\No Path Set.jpg";
             _information = new List<SpriteInfo>();
         }
         public void Serialize() {
             XmlSerializer mySerializer = new XmlSerializer(typeof(SpriteSheetInfo));
-            StreamWriter streamWriter = new StreamWriter(_sheetName + ".xml");
+            StreamWriter streamWriter = new StreamWriter("XML\\" + _sheetName + ".xml");
+
             mySerializer.Serialize(streamWriter, this);
             streamWriter.Close();
         }
         public static SpriteSheetInfo Deserialize(string path) {
             //From file //Add checks to see if it exists and all that stuff
             XmlSerializer mySerializer = new XmlSerializer(typeof(SpriteSheetInfo));
-            StreamReader streamReader = new StreamReader(path + ".xml");
+            StreamReader streamReader = new StreamReader("XML\\" + path + ".xml");
             SpriteSheetInfo dataObj = mySerializer.Deserialize(streamReader) as SpriteSheetInfo;
             streamReader.Close();
             return dataObj;

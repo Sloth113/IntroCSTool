@@ -58,6 +58,9 @@ namespace ToolProject {
             Pen blackPen = new Pen(Color.Black, 1);
             Pen redPen = new Pen(Color.Red, 2);
 
+            //Image
+            //e.Graphics.DrawImage(image, destRect(SIZE OF IMAGE), srcRect(Rect for Source img), units(Pixels?));
+
             foreach (SpriteInfo s in spriteSheet._information) {
                 // Create rectangle.
                 
@@ -194,6 +197,13 @@ namespace ToolProject {
         
         private void spriteSheetText_TextChanged(object sender, EventArgs e) {
             this.Text = spriteSheetText.Text;
+            spriteSheet._sheetName = spriteSheetText.Text;
+
+        }
+
+        private void loadSprite_Click(object sender, EventArgs e) {
+            //LOAD IMAGE TO PICTURE 
+
         }
     }
 }

@@ -51,6 +51,7 @@
             this.spriteNameText = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.loadSprite = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.spriteSheetBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yOffset)).BeginInit();
@@ -65,11 +66,12 @@
             // 
             // testBtn
             // 
-            this.testBtn.Location = new System.Drawing.Point(668, 306);
+            this.testBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.testBtn.Location = new System.Drawing.Point(644, 369);
             this.testBtn.Name = "testBtn";
             this.testBtn.Size = new System.Drawing.Size(75, 23);
             this.testBtn.TabIndex = 10;
-            this.testBtn.Text = "button1";
+            this.testBtn.Text = "Export XML";
             this.testBtn.UseVisualStyleBackColor = true;
             this.testBtn.Click += new System.EventHandler(this.testBtn_Click);
             // 
@@ -78,7 +80,7 @@
             this.spriteSheetBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.spriteSheetBox.Location = new System.Drawing.Point(13, 12);
             this.spriteSheetBox.Name = "spriteSheetBox";
-            this.spriteSheetBox.Size = new System.Drawing.Size(411, 288);
+            this.spriteSheetBox.Size = new System.Drawing.Size(410, 290);
             this.spriteSheetBox.TabIndex = 1;
             this.spriteSheetBox.TabStop = false;
             this.spriteSheetBox.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -88,16 +90,18 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox2.Location = new System.Drawing.Point(430, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(313, 288);
+            this.pictureBox2.Size = new System.Drawing.Size(315, 290);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
             // gridButton
             // 
-            this.gridButton.Location = new System.Drawing.Point(76, 302);
+            this.gridButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gridButton.Location = new System.Drawing.Point(157, 371);
             this.gridButton.Name = "gridButton";
             this.gridButton.Size = new System.Drawing.Size(75, 23);
             this.gridButton.TabIndex = 0;
@@ -107,7 +111,8 @@
             // 
             // yOffset
             // 
-            this.yOffset.Location = new System.Drawing.Point(103, 370);
+            this.yOffset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.yOffset.Location = new System.Drawing.Point(103, 374);
             this.yOffset.Maximum = new decimal(new int[] {
             500,
             0,
@@ -120,7 +125,8 @@
             // 
             // xOffset
             // 
-            this.xOffset.Location = new System.Drawing.Point(34, 370);
+            this.xOffset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.xOffset.Location = new System.Drawing.Point(34, 374);
             this.xOffset.Maximum = new decimal(new int[] {
             500,
             0,
@@ -132,8 +138,9 @@
             // 
             // offsetLabel
             // 
+            this.offsetLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.offsetLabel.AutoSize = true;
-            this.offsetLabel.Location = new System.Drawing.Point(19, 354);
+            this.offsetLabel.Location = new System.Drawing.Point(19, 358);
             this.offsetLabel.Name = "offsetLabel";
             this.offsetLabel.Size = new System.Drawing.Size(27, 13);
             this.offsetLabel.TabIndex = 6;
@@ -141,8 +148,9 @@
             // 
             // xOffsetLab
             // 
+            this.xOffsetLab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.xOffsetLab.AutoSize = true;
-            this.xOffsetLab.Location = new System.Drawing.Point(19, 375);
+            this.xOffsetLab.Location = new System.Drawing.Point(19, 379);
             this.xOffsetLab.Name = "xOffsetLab";
             this.xOffsetLab.Size = new System.Drawing.Size(15, 13);
             this.xOffsetLab.TabIndex = 7;
@@ -150,8 +158,9 @@
             // 
             // yOffsetLab
             // 
+            this.yOffsetLab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.yOffsetLab.AutoSize = true;
-            this.yOffsetLab.Location = new System.Drawing.Point(89, 375);
+            this.yOffsetLab.Location = new System.Drawing.Point(89, 379);
             this.yOffsetLab.Name = "yOffsetLab";
             this.yOffsetLab.Size = new System.Drawing.Size(15, 13);
             this.yOffsetLab.TabIndex = 8;
@@ -159,8 +168,9 @@
             // 
             // yBoxLab
             // 
+            this.yBoxLab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.yBoxLab.AutoSize = true;
-            this.yBoxLab.Location = new System.Drawing.Point(89, 336);
+            this.yBoxLab.Location = new System.Drawing.Point(89, 340);
             this.yBoxLab.Name = "yBoxLab";
             this.yBoxLab.Size = new System.Drawing.Size(15, 13);
             this.yBoxLab.TabIndex = 13;
@@ -168,8 +178,9 @@
             // 
             // xBoxLab
             // 
+            this.xBoxLab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.xBoxLab.AutoSize = true;
-            this.xBoxLab.Location = new System.Drawing.Point(19, 336);
+            this.xBoxLab.Location = new System.Drawing.Point(19, 340);
             this.xBoxLab.Name = "xBoxLab";
             this.xBoxLab.Size = new System.Drawing.Size(15, 13);
             this.xBoxLab.TabIndex = 12;
@@ -177,8 +188,9 @@
             // 
             // gridBoxLab
             // 
+            this.gridBoxLab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gridBoxLab.AutoSize = true;
-            this.gridBoxLab.Location = new System.Drawing.Point(19, 315);
+            this.gridBoxLab.Location = new System.Drawing.Point(19, 319);
             this.gridBoxLab.Name = "gridBoxLab";
             this.gridBoxLab.Size = new System.Drawing.Size(25, 13);
             this.gridBoxLab.TabIndex = 11;
@@ -186,7 +198,8 @@
             // 
             // gridBoxX
             // 
-            this.gridBoxX.Location = new System.Drawing.Point(34, 331);
+            this.gridBoxX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gridBoxX.Location = new System.Drawing.Point(34, 335);
             this.gridBoxX.Maximum = new decimal(new int[] {
             500,
             0,
@@ -208,7 +221,8 @@
             // 
             // gridBoxY
             // 
-            this.gridBoxY.Location = new System.Drawing.Point(103, 331);
+            this.gridBoxY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gridBoxY.Location = new System.Drawing.Point(103, 335);
             this.gridBoxY.Maximum = new decimal(new int[] {
             500,
             0,
@@ -231,8 +245,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(505, 336);
+            this.label1.Location = new System.Drawing.Point(505, 340);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 13);
             this.label1.TabIndex = 24;
@@ -240,8 +255,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(435, 336);
+            this.label2.Location = new System.Drawing.Point(435, 340);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(15, 13);
             this.label2.TabIndex = 23;
@@ -249,8 +265,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(435, 315);
+            this.label3.Location = new System.Drawing.Point(435, 319);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 22;
@@ -258,7 +275,8 @@
             // 
             // currentPosX
             // 
-            this.currentPosX.Location = new System.Drawing.Point(450, 331);
+            this.currentPosX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.currentPosX.Location = new System.Drawing.Point(450, 335);
             this.currentPosX.Maximum = new decimal(new int[] {
             500,
             0,
@@ -276,7 +294,8 @@
             // 
             // currentPosY
             // 
-            this.currentPosY.Location = new System.Drawing.Point(519, 331);
+            this.currentPosY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.currentPosY.Location = new System.Drawing.Point(519, 335);
             this.currentPosY.Maximum = new decimal(new int[] {
             500,
             0,
@@ -295,8 +314,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(505, 375);
+            this.label4.Location = new System.Drawing.Point(505, 379);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(15, 13);
             this.label4.TabIndex = 19;
@@ -304,8 +324,9 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(435, 375);
+            this.label5.Location = new System.Drawing.Point(435, 379);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(15, 13);
             this.label5.TabIndex = 18;
@@ -313,8 +334,9 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(435, 354);
+            this.label6.Location = new System.Drawing.Point(435, 358);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(27, 13);
             this.label6.TabIndex = 17;
@@ -322,7 +344,8 @@
             // 
             // currentSizeX
             // 
-            this.currentSizeX.Location = new System.Drawing.Point(450, 370);
+            this.currentSizeX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.currentSizeX.Location = new System.Drawing.Point(450, 374);
             this.currentSizeX.Maximum = new decimal(new int[] {
             500,
             0,
@@ -345,7 +368,8 @@
             // 
             // currentSizeY
             // 
-            this.currentSizeY.Location = new System.Drawing.Point(519, 370);
+            this.currentSizeY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.currentSizeY.Location = new System.Drawing.Point(519, 374);
             this.currentSizeY.Maximum = new decimal(new int[] {
             500,
             0,
@@ -369,7 +393,8 @@
             // 
             // spriteSheetText
             // 
-            this.spriteSheetText.Location = new System.Drawing.Point(179, 331);
+            this.spriteSheetText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.spriteSheetText.Location = new System.Drawing.Point(157, 335);
             this.spriteSheetText.Name = "spriteSheetText";
             this.spriteSheetText.Size = new System.Drawing.Size(146, 20);
             this.spriteSheetText.TabIndex = 25;
@@ -377,7 +402,8 @@
             // 
             // spriteNameText
             // 
-            this.spriteNameText.Location = new System.Drawing.Point(573, 331);
+            this.spriteNameText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.spriteNameText.Location = new System.Drawing.Point(573, 335);
             this.spriteNameText.Name = "spriteNameText";
             this.spriteNameText.Size = new System.Drawing.Size(146, 20);
             this.spriteNameText.TabIndex = 26;
@@ -385,8 +411,9 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(176, 316);
+            this.label7.Location = new System.Drawing.Point(154, 320);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 13);
             this.label7.TabIndex = 27;
@@ -394,19 +421,32 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(573, 316);
+            this.label8.Location = new System.Drawing.Point(573, 320);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 13);
             this.label8.TabIndex = 28;
             this.label8.Text = "Sprite Name";
+            // 
+            // loadSprite
+            // 
+            this.loadSprite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.loadSprite.Location = new System.Drawing.Point(309, 333);
+            this.loadSprite.Name = "loadSprite";
+            this.loadSprite.Size = new System.Drawing.Size(75, 23);
+            this.loadSprite.TabIndex = 29;
+            this.loadSprite.Text = "Load Image";
+            this.loadSprite.UseVisualStyleBackColor = true;
+            this.loadSprite.Click += new System.EventHandler(this.loadSprite_Click);
             // 
             // SpriteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(761, 402);
+            this.ClientSize = new System.Drawing.Size(761, 406);
+            this.Controls.Add(this.loadSprite);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.spriteNameText);
@@ -435,8 +475,9 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.spriteSheetBox);
             this.Controls.Add(this.testBtn);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.KeyPreview = true;
+            this.MinimumSize = new System.Drawing.Size(777, 440);
             this.Name = "SpriteForm";
             this.Text = "SprtieForm";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpriteForm_KeyDown);
@@ -486,5 +527,6 @@
         private System.Windows.Forms.TextBox spriteNameText;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button loadSprite;
     }
 }
